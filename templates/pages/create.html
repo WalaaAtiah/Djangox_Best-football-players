@@ -1,0 +1,17 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}Creat page{% endblock title %}
+
+{% block main %}
+    
+<div class="create-view">
+    <form  method='post' enctype="multipart/form-data">
+        {% csrf_token %}
+        {% load crispy_forms_tags %}
+        {{ form|crispy }}
+        <button type="submit">ADD</button>
+    </form>
+</div>
+
+{% endblock main %}

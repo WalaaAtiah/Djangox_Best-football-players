@@ -65,4 +65,4 @@
 
 <br>
 
-## [pull requests](https://github.com/WalaaAtiah/Djangox_Best-football-players/pull/1)
+## [pull requests](https://github.com/WalaaAtiah/Djangox_Best-football-players/pull/2)

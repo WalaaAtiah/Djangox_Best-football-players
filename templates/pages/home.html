@@ -4,6 +4,7 @@
 {% block title %}Home page{% endblock title %}
 
 {% block content %}
+<div class="" id="top_image"></div>
 {% endblock content %}
 {% block main %}
     
@@ -12,10 +13,21 @@
 </div>
 
 <div class="list">
-<button class="add"><a href="{% url 'player_create' %}">Add Player</a></button>
+<a href="{% url 'player_create' %}"><button class="button-33" role="button">Add Player</button></a>
+<div class="row">
 {% for player in object_list %}
-<h1>{{player.name}}</h1>
+<div class="card">
+  <a href="{% url 'player_detail'  player.id%}">
+  <img src={{player.image}} alt={{player.name}} class="cardImage" >
+  <h3 class="cardh3" >{{player.name}}</h3>
+  <p class="cardp">{{player.team}} </p>
+  </a>
+</div>
+
 {% endfor %}
+</div>
 </div>
 
 {% endblock main %}
+
+

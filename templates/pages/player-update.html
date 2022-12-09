@@ -1,0 +1,25 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}Create page{% endblock title %}
+
+{% block main %}
+<div class="creat">
+
+  <div class="create-view">
+    <h1> Update {{player.name}} card</h1>
+    <div class="update_form">
+        <form   method='post' >   
+          {% csrf_token %}      
+          {{form.as_p}} 
+          
+         <input type='submit' value="Save" class="save_button"/>
+               
+        </form> 
+        <a  href="{% url 'home' %}" id="cancel"><button class="cancel_button" role="button">Cancel</button></a>
+    </div>
+  </div>
+  
+</div>
+
+{% endblock main %}

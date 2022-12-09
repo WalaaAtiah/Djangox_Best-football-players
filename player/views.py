@@ -20,18 +20,18 @@ class PlayerDetailView(DetailView):
 
 
 class PlayerCreateView(CreateView):
-    template_name = "pages/create.html"
+    template_name = "pages/player_create.html"
     model = Player
-    fields = ["name","team","position","Age","publisher","data","image"]
+    fields = ["name","team","Position","Age","publisher","data","image"]
 
 
 class PlayerUpdateView(UpdateView):
     template_name = "pages/player-update.html"
     model = Player
-    fields = []
+    fields = ["name","team","Position","Age","publisher","data","image"]
 
 
 class PlayerDeleteView(DeleteView):
     template_name = "pages/player-delete.html"
     model = Player
-    success_url = reverse_lazy("player_list")
+    success_url = reverse_lazy("home")

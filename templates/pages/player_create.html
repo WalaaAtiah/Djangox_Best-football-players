@@ -1,0 +1,23 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}Create page{% endblock title %}
+
+{% block main %}
+<div class="creat">
+
+  <div class="create-view">
+    <h1> Add your favorite player</h1>
+    <form   method='post' class="add_form">   
+      {% csrf_token %}      
+      {{form.as_p}}        
+      <input type='submit' value="Post" class="button2"/>
+    </form> 
+  </div>
+  <div class="create_button_position">
+
+    <a class="back_a" href="{% url 'home' %}"><button class="button-73" role="button">Back</button></a>
+  </div>
+</div>
+
+{% endblock main %}

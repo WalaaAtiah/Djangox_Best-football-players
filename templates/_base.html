@@ -21,7 +21,9 @@
 </head>
 
 <body>
-  <header class="p-3 mb-3 border-bottom" id="header">
+  <header class=" mb-3 border-bottom" id="header">
+    <img src="{% static 'images/logo.png' %}" alt=logo class="logo" >
+    
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
@@ -29,7 +31,6 @@
             <use xlink:href="#bootstrap" />
           </svg>
         </a>
-
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a href="{% url 'home' %}" class="home" >Home</a></li>
           <li><a href="{% url 'about' %}" class="home" >About</a></li>
@@ -59,21 +60,26 @@
     </div>
   </header>
 
-  <div class="" id="top_image">
-    {% block content %}
-    <p>Default content...</p>
-    {% endblock content %}
-  </div>
+  {% block content %} 
+  {% endblock content %}
+  
   <div>
     {% block main %}
-    <p>Default main...</p>
+    
     {% endblock main %}
 
   </div>
 
   <footer class="footer">
+    <img src="{% static 'images/logo.png' %}" alt=logo class="logo" >
     <div class="container">
-      <span class="text-muted">Footer...</span>
+      <div class="dcr-17k9rsw"><a href="#top" class="dcr-1sla8qk">
+        <span class="dcr-1626eix">Back to top</span>
+        
+          
+        </span>
+      </a>
+    </div>
     </div>
   </footer>
 

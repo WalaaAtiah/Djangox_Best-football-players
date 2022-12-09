@@ -1,0 +1,32 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}detail page{% endblock title %}
+
+{% block content %}
+{% endblock content %}
+{% block main %}
+    
+<div class="detail">
+    <img src={{player.image}} alt={{player.name}} class="detail_image" >
+    <div class="detail_secand_div">
+    <h1 class="detaleh1"> {{player.name}}  </h1>
+    <ul>
+        <li class="detail_li"><h5>Team: </h5> {{player.team}}  </li>
+        <li class="detail_li"><h5>Position : </h5> {{player.Position}}  </li>
+        <li class="detail_li"><h5>Age : </h5> {{player.Age}}  </li>
+        <li class="detail_li"><h5>Data: </h5> {{player.data}}  </li>
+        <li class="detail_li"><h5>Publisher : </h5> {{player.publisher}}</li>
+    </ul>
+   
+    <a href="{% url 'player_update' player.id %}"><button class="update" role="button">Update</button></a>
+    <a href="{% url 'player_delete' player.id %}">  <button class="delete" role="button">Delete</button></a>
+    
+    </div>
+    
+    
+</div>
+<a class="back_a" href="{% url 'home' %}"><button class="button-73" role="button">Back</button></a>
+
+
+{% endblock main %}
